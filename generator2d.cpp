@@ -8,8 +8,8 @@ Generator2D::Generator2D(QWidget *parent) :
     ui->setupUi(this);
 }
 
-Generator2D::Generator2D(QWidget *parent, QString *filename) :
-    QDialog(parent), QString(filename),
+Generator2D::Generator2D(QWidget *parent, QString filename) :
+    QDialog(parent),
     ui(new Ui::Generator2D)
 {
     ui->setupUi(this);
@@ -19,4 +19,5 @@ Generator2D::~Generator2D()
 {
     delete ui;
 }
+
 
