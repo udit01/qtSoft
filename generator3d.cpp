@@ -1,5 +1,6 @@
 #include "generator3d.h"
 #include "ui_generator3d.h"
+#include "Model3d.hpp"
 
 Generator3D::Generator3D(QWidget *parent) :
     QDialog(parent),
@@ -14,6 +15,7 @@ Generator3D::Generator3D(QWidget *parent, QString filename) :
     ui(new Ui::Generator3D)
 {
     ui->setupUi(this);
+    Model3d *model = new Model3d();
 }
 
 Generator3D::~Generator3D()

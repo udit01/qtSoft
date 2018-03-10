@@ -2,6 +2,7 @@
 #define GENERATOR3D_H
 
 #include <QDialog>
+#include "Model3d.hpp"
 
 namespace Ui {
 class Generator3D;
@@ -15,9 +16,11 @@ public:
     explicit Generator3D(QWidget *parent);
     explicit Generator3D(QWidget *parent, QString filename);
     ~Generator3D();
+    Model3d *model3d;
 
 private:
     Ui::Generator3D *ui;
+
 };
 
 #endif // GENERATOR3D_H

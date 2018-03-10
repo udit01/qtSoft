@@ -24,13 +24,29 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
-        main.cpp \
-        mainwindow.cpp \
+    Graph.cpp \
+    Line.cpp \
+    Model3d.cpp \
+    OrthographicViews.cpp \
+    Plane.cpp \
+    Point.cpp \
+    Projection.cpp \
+    DirectionCosines.cpp \
+    main.cpp \
+    mainwindow.cpp \
     generator3d.cpp \
     generator2d.cpp
 
 HEADERS += \
-        mainwindow.h \
+    DirectionCosines.hpp \
+    Graph.hpp \
+    Line.hpp \
+    Model3d.hpp \
+    Point.hpp \
+    OrthographicViews.hpp \
+    Plane.hpp \
+    Projection.hpp \
+    mainwindow.h \
     generator3d.h \
     generator2d.h
 
@@ -38,3 +54,7 @@ FORMS += \
         mainwindow.ui \
     generator3d.ui \
     generator2d.ui
+
+win32: LIBS += -lgcc
+
+win32: LIBS += -lstdc++
