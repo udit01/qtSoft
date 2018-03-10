@@ -58,7 +58,6 @@ void MainWindow::on_openImp_clicked()
             case QMessageBox::Open:
                 // opening a 2d/3d window based on extension
                 ext = file_name[(file_name.length()-2)];
-                std::cout << ext.cell() << '\n';
 
                 hide();
                 if(ext == '2')
@@ -66,14 +65,19 @@ void MainWindow::on_openImp_clicked()
                     generator2D = new Generator2D(this, file_name);
                     generator2D -> show();
                 }
-                else
+                else if(ext == '3')
                 {
                     generator3D = new Generator3D(this, file_name);
                     generator3D -> show();
                 }
+                else
+                {
+                    file_name = QString();
+                }
                 break;
             case QMessageBox::Discard:
                 // do nothing if discarded
+                file_name = QString();
                 break;
             default:
                 // should never be reached

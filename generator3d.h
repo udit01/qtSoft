@@ -18,6 +18,9 @@ public:
     ~Generator3D();
     Model3d *model3d;
 
+private slots:
+    void on_openImp_clicked();
+
 private:
     Ui::Generator3D *ui;
 
