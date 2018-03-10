@@ -6,12 +6,14 @@
 #ifndef INC_DIRECTIONCOSINES_H
 #define INC_DIRECTIONCOSINES_H
 
+#include <float.h>
+
 /// Class to define the direction cosines in 3d space
 class DirectionCosines
 { 
 public:
 	/// Class might be initialized with direction cosines or ratios, to make it inclusive of both.
-	DirectionCosine(float a, float b, float c);
+    DirectionCosines(float a, float b, float c);
 	~DirectionCosines();
 
 	/// cosine of the angle made by the line/segment with the x-axis
@@ -22,8 +24,8 @@ public:
 	float zl;
 
 
-	float dotProduct(DirectionCosine l);
-	DirectionCosine crossProduct(DirectionCosine l);
+    float dotProduct(DirectionCosines l);
+    DirectionCosines crossProduct(DirectionCosines l);
 
 };
 

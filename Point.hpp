@@ -3,9 +3,14 @@
 * Different point operations in 3d space.
 * Contains Vector operations 
 *************************/
-
 #ifndef INC_POINT_H
 #define INC_POINT_H
+
+#include <stdbool.h>
+#include <float.h>
+#include <string>
+class Plane;
+class Line;
 
 /// A Class implementing Labelled 3D, Unlabelled 3D, Labelled 2D, Unlabelled 2D Point Abstract Data Types with appropriate methods.
 class Point
@@ -19,7 +24,7 @@ class Point
 		///Z-Coordinate of the point
 		float z;
 		/// label of the Point - set to Null in case of Unlabelled Point
-		string label;
+        std::string label;
 
 		//Different Constructors for 2D
 
@@ -27,13 +32,13 @@ class Point
 		Point(float x, float y);
 
 		///Constructor for labelled 2D point
-		Point(float x, float y, string label);
+        Point(float x, float y, std::string label);
 
 		///Constructor for unlabelled 3D point
 		Point(float x, float y, float z);
 
 		///Constructor for labelled 3D point
-		Point(float x, float y, float z, string label);
+        Point(float x, float y, float z, std::string label);
 
 		///Destructor for the point object
 		~Point();

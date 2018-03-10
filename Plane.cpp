@@ -2,8 +2,8 @@
 * Implementation of Plane Abstract Data Type
 *
 *************************/
-#include <bool>
-#include <float>
+#include <stdbool.h>
+#include <float.h>
 #include <string>
 #include "DirectionCosines.hpp"
 #include "Graph.hpp"
@@ -48,4 +48,3 @@
 	Line Plane::lineOfIntersection(Plane P){
 
 	}
-};

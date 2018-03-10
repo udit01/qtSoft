@@ -2,13 +2,12 @@
 * Implementation of Graph Abstract Data Type
 *
 *************************/
-#include <bool>
-#include <float>
+#include <stdbool.h>
+#include <float.h>
 #include <string>
 #include "DirectionCosines.hpp"
 #include "Graph.hpp"
 #include "Line.hpp"
-#include "Model3d.hpp"
 #include "OrthographicViews.hpp"
 #include "Plane.hpp"
 #include "Point.hpp"
@@ -54,7 +53,7 @@
 	}
 
 	/// deletes an edge from the Graph
-	void Graph::deleteEdge(Edge E){
+    void Graph::deleteEdge(Line E){
 
 	}
 

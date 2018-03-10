@@ -15,7 +15,7 @@ Generator3D::Generator3D(QWidget *parent, QString filename) :
     ui(new Ui::Generator3D)
 {
     ui->setupUi(this);
-    model = new Model3d();
+    Model3d *model = new Model3d();
 }
 
 Generator3D::~Generator3D()

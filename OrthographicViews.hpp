@@ -6,17 +6,21 @@
 #ifndef INC_ORTHOGRAPHICVIEWS_H
 #define INC_ORTHOGRAPHICVIEWS_H
 
+#include <string>
+class Projection;
+class Model3d;
+
 /// A Representation for the OrthographicViews Class(2D View) specified using a graph of nodes and edges
 class OrthographicViews
 {
 public:
 	/// Three Orthographic Views that will be rendered or used to render the 3D Model
 	/// the XY-Projection
-	Projection xy;
+    Projection *xy;
 	/// the YZ-Projection
-	Projection yz;
+    Projection *yz;
 	/// the ZX-Projection
-	Projection zx;
+    Projection *zx;
 
 	/// True if the views are labelled 
 	bool areLabelled;
@@ -30,10 +34,10 @@ public:
 	~OrthographicViews();
 
 	///Serializes the Orthographic Views object for storage/transfer.
-	string serialize();
+    std::string serialize();
 
 	///Deserializes the String object , makes this object from string after receiving.
-	static OrthographicViews deserialize(string s);
+    static OrthographicViews deserialize(std::string s);
 
 	/// generates the wireframe from the view set
 	void generateWireFrame();

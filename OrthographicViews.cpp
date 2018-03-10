@@ -2,8 +2,8 @@
 * Implementation of Orthographic Views Abstract Data Type
 *
 *************************/
-#include <bool>
-#include <float>
+#include <stdbool.h>
+#include <float.h>
 #include <string>
 #include "DirectionCosines.hpp"
 #include "Graph.hpp"
@@ -25,12 +25,12 @@
 	}
 
 	///Serializes the Orthographic Views object for storage/transfer.
-	string OrthographicViews::serialize(){
+    std::string OrthographicViews::serialize(){
 
 	}
 
 	///Deserializes the String object , makes this object from string after receiving.
-	static OrthographicViews OrthographicViews::deserialize(string s) {
+    OrthographicViews OrthographicViews::deserialize(std::string s) {
 
 	}
 
@@ -53,4 +53,3 @@
 	void OrthographicViews::checkValid(){
 
 	}
-};

@@ -2,8 +2,8 @@
 * Implementation of Projection Abstract Data Type
 *
 *************************/
-#include <bool>
-#include <float>
+#include <stdbool.h>
+#include <float.h>
 #include <string>
 #include "DirectionCosines.hpp"
 #include "Graph.hpp"
@@ -15,12 +15,12 @@
 #include "Projection.hpp"
 
 	///Serializes the Projection object for storage/transfer.
-	string Projection::serialize() {
+    std::string Projection::serialize() {
 
 	}
 
 	///Deserializes the String object , makes this object from string.
-	static Projection Projection::deserialize(string s) {
+    Projection Projection::deserialize(std::string s) {
 
 	}
 	/// scales the view by the specified factor
@@ -40,4 +40,3 @@
 	{
 
 	}
-};

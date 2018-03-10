@@ -3,8 +3,9 @@
 * Different point operations in 3d space.
 * Contains Vector operations 
 *************************/
-#include <bool>
-#include <float>
+
+#include <stdbool.h>
+#include <float.h>
 #include <string>
 #include "DirectionCosines.hpp"
 #include "Graph.hpp"
@@ -23,7 +24,7 @@
 		}
 
 		///Constructor for labelled 2D point
-		Point::Point(float x, float y, string label) {
+        Point::Point(float x, float y, std::string label) {
 
 		}
 
@@ -33,7 +34,7 @@
 		}
 
 		///Constructor for labelled 3D point
-		Point::Point(float x, float y, float z, string label) {
+        Point::Point(float x, float y, float z, std::string label) {
 
 		}
 
@@ -117,4 +118,3 @@
 
 		}
 
-};

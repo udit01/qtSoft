@@ -6,6 +6,10 @@
 #ifndef INC_PLANE_H
 #define INC_PLANE_H
 
+class Point;
+class Line;
+class DirectionCosines;
+
 /// A Class for representation of a plane in the 3D space
 class Plane
 {
@@ -15,9 +19,9 @@ class Plane
 
 public:
 	/// the direction cosines of the normal to the plane 
-	DirectionCosine l;
+    DirectionCosines *l;
 	/// a point that lies on the plane to fix it to a location in the space
-	Point p;
+    Point *p;
 
 	///Constructor for plane in form of ax + by + cz + d = 0
 	Plane(float a, float b, float c, float d);

@@ -2,8 +2,8 @@
 * Implementation of 3DModel class
 *
 *************************/
-#include <bool>
-#include <float>
+#include <stdbool.h>
+#include <float.h>
 #include <string>
 #include "DirectionCosines.hpp"
 #include "Graph.hpp"
@@ -15,7 +15,7 @@
 #include "Projection.hpp"
 
 /// A Representation for the 3D Model Class(isometric View) specified using a graph of nodes and edges
-public:
+
 	///Constructor for 3d model
 	Model3d::Model3d() {
 
@@ -44,7 +44,7 @@ public:
 	}
 
 	///Generate a projection of the 3D model on the given plane
-	Projection Model3d:generateProjection(Plane P){
+    Projection Model3d::generateProjection(Plane P){
 
 	}
 
@@ -59,12 +59,12 @@ public:
 	}
 
 	///Getting the serialized version of object to store/transfer
-	string Model3d::serialized(){
+    std::string Model3d::serialized(){
 
 	}
 
 	///Getting the deserialized version of string to retrive object contents
-	static Model3d Model3d::deserialize(string s) {
+    Model3d Model3d::deserialize(std::string s) {
 
 	}
 

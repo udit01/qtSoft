@@ -6,14 +6,19 @@
 #ifndef INC_GRAPH_H
 #define INC_GRAPH_H
 
+#include <list>
+class Point;
+class Line;
+
+
 /// A Graph Class to model a 3D or a 2D view. Determine whether to use an Adjcancey List or Adjanceny Matrix representation
 class Graph
 {
 public:
 	/// the abstract Node data member that describes the corners/vertices of the View
-	list<Point> Node;
+    std::list<Point> *Node;
 	/// the abstract EdgeSet data member that describes the solid/dashed edges of the View
-	list<Line> EdgeSet;
+    std::list<Line> *EdgeSet;
 
 	///Constructor for Graph object
 	Graph();
@@ -40,7 +45,7 @@ public:
 	void deleteNode(Point P);
 
 	/// deletes an edge from the Graph
-	void deleteEdge(Edge E);
+    void deleteEdge(Line E);
 
 };
 

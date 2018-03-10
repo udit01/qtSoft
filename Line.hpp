@@ -6,6 +6,11 @@
 #ifndef INC_LINE_H
 #define INC_LINE_H
 
+class Point;
+class Plane;
+class DirectionCosines;
+class Line;
+
 /// A Class to define a line in the space 2D/3D
 class Line
 {
@@ -13,9 +18,9 @@ class Line
 
 public:
 	/// the direction cosines of the line
-	DirectionCosine l;
+    DirectionCosines *l;
 	/// a point that lies on theline to fix it to a location in the space
-	Point p;
+    Point *p;
 
 	///Constructor for line of the form of direction cosines and a point
 	Line(DirectionCosines dc, Point p);

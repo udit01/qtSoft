@@ -6,25 +6,33 @@
 #ifndef INC_PROJECTION_H
 #define INC_PROJECTION_H
 
+class Point;
+class Plane;
+class DirectionCosines;
+class Line;
+#include <string>
+class Graph;
+#include <float.h>
+
 /// The Projection Class which simply defines the detailed graph required for our software
 class Projection
 {
 public:
 	/// defining a graph
-	Graph G;
+    Graph *G;
 	/// defining the reference origin 
-	Point O;
+    Point *O;
 	/// defining the Direction cosines of reference axis 1
-	DirectionCosine l1;
+    DirectionCosines *l1;
 	/// defining the Direction cosines of reference axis 2
-	DirectionCosine l2;
+    DirectionCosines *l2;
 
 
 	///Serializes the Projection object for storage/transfer.
-	string serialize();
+    std::string serialize();
 
 	///Deserializes the String object , makes this object from string.
-	static Projection deserialize(string s);
+    static Projection deserialize(std::string s);
 
 	/// scales the view by the specified factor
 	void scale(float factor);

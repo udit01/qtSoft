@@ -54,3 +54,7 @@ FORMS += \
         mainwindow.ui \
     generator3d.ui \
     generator2d.ui
+
+win32: LIBS += -lgcc
+
+win32: LIBS += -lstdc++
