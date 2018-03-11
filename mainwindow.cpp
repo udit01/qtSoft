@@ -73,12 +73,10 @@ void MainWindow::on_openImp_clicked()
                 }
                 else
                 {
-                    file_name = QString();
                 }
                 break;
             case QMessageBox::Discard:
                 // do nothing if discarded
-                file_name = QString();
                 break;
             default:
                 // should never be reached

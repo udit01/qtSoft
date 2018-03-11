@@ -35,7 +35,8 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     generator3d.cpp \
-    generator2d.cpp
+    generator2d.cpp \
+    addpoint.cpp
 
 HEADERS += \
     DirectionCosines.hpp \
@@ -48,12 +49,14 @@ HEADERS += \
     Projection.hpp \
     mainwindow.h \
     generator3d.h \
-    generator2d.h
+    generator2d.h \
+    addpoint.h
 
 FORMS += \
         mainwindow.ui \
     generator3d.ui \
-    generator2d.ui
+    generator2d.ui \
+    addpoint.ui
 
 win32: LIBS += -lgcc
 

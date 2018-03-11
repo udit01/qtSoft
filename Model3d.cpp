@@ -65,6 +65,7 @@
 
 	///Getting the deserialized version of string to retrive object contents
     Model3d Model3d::deserialize(std::string s) {
-
+        Model3d *blank = new Model3d();
+        return *blank;
 	}
 

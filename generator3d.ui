@@ -161,9 +161,9 @@
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>560</y>
+     <y>570</y>
      <width>41</width>
-     <height>28</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="font">
@@ -183,9 +183,9 @@
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>560</y>
+     <y>570</y>
      <width>41</width>
-     <height>28</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="font">
@@ -219,12 +219,12 @@
     <string>Create Design</string>
    </property>
   </widget>
-  <widget class="QListView" name="listPoints">
+  <widget class="QListWidget" name="listPoints">
    <property name="geometry">
     <rect>
-     <x>15</x>
-     <y>120</y>
-     <width>231</width>
+     <x>20</x>
+     <y>131</y>
+     <width>222</width>
      <height>421</height>
     </rect>
    </property>
