@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1289</width>
-    <height>592</height>
+    <width>1315</width>
+    <height>738</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,34 +16,11 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgb(255, 255, 255);</string>
   </property>
-  <widget class="QScrollArea" name="scrollPoints">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>90</y>
-     <width>221</width>
-     <height>291</height>
-    </rect>
-   </property>
-   <property name="widgetResizable">
-    <bool>true</bool>
-   </property>
-   <widget class="QWidget" name="scrollAreaWidgetContents">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>219</width>
-      <height>289</height>
-     </rect>
-    </property>
-   </widget>
-  </widget>
   <widget class="QPushButton" name="addEdges">
    <property name="geometry">
     <rect>
      <x>80</x>
-     <y>460</y>
+     <y>640</y>
      <width>101</width>
      <height>28</height>
     </rect>
@@ -59,7 +36,7 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>530</y>
+     <y>690</y>
      <width>221</width>
      <height>28</height>
     </rect>
@@ -75,7 +52,7 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>40</y>
+     <y>80</y>
      <width>93</width>
      <height>28</height>
     </rect>
@@ -90,8 +67,8 @@
   <widget class="QPushButton" name="openExp">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>40</y>
+     <x>150</x>
+     <y>80</y>
      <width>93</width>
      <height>28</height>
     </rect>
@@ -107,9 +84,9 @@
    <property name="geometry">
     <rect>
      <x>270</x>
-     <y>50</y>
-     <width>1001</width>
-     <height>511</height>
+     <y>60</y>
+     <width>1021</width>
+     <height>661</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -183,11 +160,17 @@
   <widget class="QPushButton" name="addPoint">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>400</y>
+     <x>30</x>
+     <y>560</y>
      <width>41</width>
      <height>28</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(225, 225, 225);</string>
@@ -199,17 +182,51 @@
   <widget class="QPushButton" name="deletePoint">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>400</y>
+     <x>190</x>
+     <y>560</y>
      <width>41</width>
      <height>28</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(225, 225, 225);</string>
    </property>
    <property name="text">
     <string>-</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>0</y>
+     <width>201</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>18</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Create Design</string>
+   </property>
+  </widget>
+  <widget class="QListView" name="listPoints">
+   <property name="geometry">
+    <rect>
+     <x>15</x>
+     <y>120</y>
+     <width>231</width>
+     <height>421</height>
+    </rect>
    </property>
   </widget>
  </widget>

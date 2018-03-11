@@ -58,3 +58,5 @@ FORMS += \
 win32: LIBS += -lgcc
 
 win32: LIBS += -lstdc++
+
+DISTFILES +=

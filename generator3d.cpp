@@ -9,15 +9,15 @@ Generator3D::Generator3D(QWidget *parent) :
     ui(new Ui::Generator3D)
 {
     ui->setupUi(this);
+    model3d = new Model3d();
 }
-
 
 Generator3D::Generator3D(QWidget *parent, QString filename) :
     QDialog(parent),
     ui(new Ui::Generator3D)
 {
     ui->setupUi(this);
-    Model3d *model3d = new Model3d();
+    *model3d = Model3d::deserialize(filename.toStdString());
 }
 
 Generator3D::~Generator3D()
@@ -28,7 +28,7 @@ Generator3D::~Generator3D()
 void Generator3D::on_openImp_clicked()
 {
     // Opening import file dialog box
-    QString file_name = QFileDialog::getOpenFileName(this, "Open 3D Design", ".");
+    QString file_name = QFileDialog::getOpenFileName(NULL, "Open 3D Design", ".");
 
     // if file is not null then open a new window base on extension else do nothing
     if(!file_name.isNull())
@@ -53,19 +53,17 @@ void Generator3D::on_openImp_clicked()
                 {
                     file_name = QString();
                 }
+                else
+                {
+                    *model3d = Model3d::deserialize(file_name.toStdString());
+                    this -> show();
+                }
             case QMessageBox::Discard:
                 file_name = QString();
                 break;
             default:
                 // should never be reached
                 break;
-        }
-        if(!file_name.isNull())
-        {
-            Generator3D *generator3D = new Generator3D(this);
-            generator3D -> (*model3d) = new Model3d(file_name.toLocal8Bit().constData());
-            generator3D.setModal(true);
-            generator3D.exec();
         }
     }
 }

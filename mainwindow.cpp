@@ -3,6 +3,7 @@
 #include <iostream>
 #include "generator3d.h"
 #include "generator2d.h"
+#include "Model3d.hpp"
 #include <QFileDialog.h>
 #include <QMessageBox>
 
