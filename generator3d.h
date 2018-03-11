@@ -13,7 +13,6 @@ class Generator3D : public QDialog
     Q_OBJECT
 
 public:
-    explicit Generator3D(QWidget *parent);
     explicit Generator3D(QWidget *parent, QString filename);
     ~Generator3D();
     Model3d *model3d;

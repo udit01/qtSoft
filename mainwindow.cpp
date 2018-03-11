@@ -26,7 +26,7 @@ void MainWindow::on_openGen3d_clicked()
 {
     // open in a new Window closing the current one
     hide();
-    generator3D = new Generator3D(this);
+    generator3D = new Generator3D(this, NULL);
     generator3D -> show();
 }
 
@@ -63,7 +63,7 @@ void MainWindow::on_openImp_clicked()
                 hide();
                 if(ext == '2')
                 {
-                    generator2D = new Generator2D(this, file_name);
+                    generator2D = new Generator2D(this);
                     generator2D -> show();
                 }
                 else if(ext == '3')

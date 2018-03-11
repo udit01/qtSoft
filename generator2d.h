@@ -13,7 +13,7 @@ class Generator2D : public QDialog
 
 public:
     explicit Generator2D(QWidget *parent);
-    explicit Generator2D(QWidget *parent, QString filename);
+    //explicit Generator2D(QWidget *parent, QString filename);
     ~Generator2D();
 
 private:

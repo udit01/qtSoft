@@ -4,20 +4,21 @@
 #include <QFileDialog.h>
 #include <QMessageBox>
 
-Generator3D::Generator3D(QWidget *parent) :
-    QDialog(parent),
-    ui(new Ui::Generator3D)
-{
-    ui->setupUi(this);
-    model3d = new Model3d();
-}
-
 Generator3D::Generator3D(QWidget *parent, QString filename) :
     QDialog(parent),
     ui(new Ui::Generator3D)
 {
     ui->setupUi(this);
-    *model3d = Model3d::deserialize(filename.toStdString());
+    if(!filename.isNull())
+    {
+        *model3d = Model3d::deserialize(filename.toStdString());
+    }
+    else
+    {
+       model3d = new Model3d();
+    }
+
+
 }
 
 Generator3D::~Generator3D()
