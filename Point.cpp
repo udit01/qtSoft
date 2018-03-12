@@ -20,22 +20,30 @@
 
 		///Constructor for unlabelled 2D point
 		Point::Point(float x, float y) {
-
+            this -> x = x;
+            this -> y = y;
 		}
 
 		///Constructor for labelled 2D point
         Point::Point(float x, float y, std::string label) {
-
+            this -> x = x;
+            this -> x = x;
+            this -> label = label;
 		}
 
 		///Constructor for unlabelled 3D point
 		Point::Point(float x, float y, float z) {
-
+            this -> x = x;
+            this -> y = y;
+            this -> z = z;
 		}
 
 		///Constructor for labelled 3D point
         Point::Point(float x, float y, float z, std::string label) {
-
+            this -> x = x;
+            this -> y = y;
+            this -> z = z;
+            this -> label = label;
 		}
 
 		///Destructor for the point object
