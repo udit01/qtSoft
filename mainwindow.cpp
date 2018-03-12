@@ -43,8 +43,14 @@ void MainWindow::on_openImp_clicked()
     // Opening import file dialog box
     QString file_name = QFileDialog::getOpenFileName(this, "Open a Design", ".");
 
-    // if file is not null then open a new window base on extension else do nothing
+    QChar ext;
     if(!file_name.isNull())
+    {
+        ext = file_name[(file_name.length()-2)];
+    }
+
+    // if file is not null then open a new window base on extension else do nothing
+    if(!file_name.isNull() && (ext == '2' || ext == '3'))
     {
         QMessageBox msgBox;
         msgBox.setText(file_name);
@@ -54,35 +60,25 @@ void MainWindow::on_openImp_clicked()
         msgBox.setWindowTitle("Open Design");
 
         int ret = msgBox.exec();
-        QChar ext;
+
         switch (ret) {
             case QMessageBox::Open:
                 // opening a 2d/3d window based on extension
-                ext = file_name[(file_name.length()-2)];
-
                 hide();
                 if(ext == '2')
                 {
                     generator2D = new Generator2D(this);
                     generator2D -> show();
                 }
-                else if(ext == '3')
+                else
                 {
                     generator3D = new Generator3D(this, file_name);
                     generator3D -> show();
                 }
-                else
-                {
-                }
-                break;
-            case QMessageBox::Discard:
-                // do nothing if discarded
                 break;
             default:
-                // should never be reached
                 break;
         }
     }
-
 }
 

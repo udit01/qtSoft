@@ -29,41 +29,33 @@ Generator3D::~Generator3D()
 void Generator3D::on_openImp_clicked()
 {
     // Opening import file dialog box
-    QString file_name = QFileDialog::getOpenFileName(NULL, "Open 3D Design", ".");
+    QString file_name = QFileDialog::getOpenFileName(this, "Open a Design", ".");
+
+    QChar ext;
+    if(!file_name.isNull())
+    {
+        ext = file_name[(file_name.length()-2)];
+    }
 
     // if file is not null then open a new window base on extension else do nothing
-    if(!file_name.isNull())
+    if(!file_name.isNull() && ext == '3')
     {
         QMessageBox msgBox;
         msgBox.setText(file_name);
         msgBox.setInformativeText("Do you want to open this file?");
         msgBox.setStandardButtons(QMessageBox::Open | QMessageBox::Discard);
         msgBox.setDefaultButton(QMessageBox::Open);
-        msgBox.setWindowTitle("Open 3D Design");
-        msgBox.setModal(true);
+        msgBox.setWindowTitle("Open Design");
 
         int ret = msgBox.exec();
-        QChar ext;
+
         switch (ret) {
             case QMessageBox::Open:
-                // opening a 2d/3d window based on extension
-                ext = file_name[(file_name.length()-2)];
-
-                hide();
-                if(ext != '3')
-                {
-                    file_name = QString();
-                }
-                else
-                {
-                    model3d = Model3d::deserialize(file_name.toStdString());
-                    this -> show();
-                }
-            case QMessageBox::Discard:
-                file_name = QString();
+                // set model3d with filename
+                model3d = Model3d::deserialize(file_name.toStdString());
+                this -> show();
                 break;
             default:
-                // should never be reached
                 break;
         }
     }
