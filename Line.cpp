@@ -14,12 +14,15 @@
 
 	///Constructor for line of the form of direction cosines and a point
 	Line::Line(DirectionCosines dc, Point p) {
-
+        this -> l = new DirectionCosines(dc.xl,dc.yl,dc.zl);
+        this -> p = new Point(p.x,p.y,p.z);
 	}
 
 	///Constructor for line of the form of two points p1, p2
 	Line::Line(Point p1, Point p2) {
-
+        DirectionCosines dc = p1.directionLine(p2);
+        this -> l = new DirectionCosines(dc.xl, dc.yl, dc.zl);
+        this -> p = new Point(p1.x, p1.y, p1.z);
 	}
 
 	///Destructor for line object

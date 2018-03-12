@@ -12,6 +12,7 @@ class DirectionCosines
 public:
 	/// Class might be initialized with direction cosines or ratios, to make it inclusive of both.
     DirectionCosines(double a, double b, double c);
+
 	~DirectionCosines();
 
 	/// cosine of the angle made by the line/segment with the x-axis
@@ -20,7 +21,6 @@ public:
     double yl;
 	/// cosine of the angle made by the line/segment with the z-axis
     double zl;
-
 
     double dotProduct(DirectionCosines l);
     DirectionCosines crossProduct(DirectionCosines l);

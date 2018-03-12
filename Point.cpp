@@ -52,6 +52,16 @@
 
 		}
 		
+        ///Returns Direction of line joining the two points
+        DirectionCosines Point::directionLine(Point p)
+        {
+            DirectionCosines dL = DirectionCosines(0.0, 0.0, 0.0);
+            dL.xl = (this -> x) - p.x;
+            dL.yl = (this -> y) - p.y;
+            dL.zl = (this -> z) = p.z;
+            return dL;
+        }
+
 		///Returns distance from given Point
         double Point::distanceFromPoint(Point p){
             return sqrt(pow((this -> x) - p.x, 2.0) + pow((this -> y) - p.y, 2.0) +pow((this -> z) - p.z, 2.0));

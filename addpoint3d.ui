@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddPoint3D</class>
+ <widget class="QWidget" name="AddPoint3D">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>50</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(203, 203, 203);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="plainTextEdit">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>30</y>
+     <width>241</width>
+     <height>221</height>
+    </rect>
+   </property>
+   <property name="plainText">
+    <string>HAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHHAHAHvHAHAH</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -9,6 +9,7 @@
 #include <string>
 class Plane;
 class Line;
+class DirectionCosines;
 
 /// A Class implementing Labelled 3D, Unlabelled 3D, Labelled 2D, Unlabelled 2D Point Abstract Data Types with appropriate methods.
 class Point
@@ -41,6 +42,9 @@ class Point
 		///Destructor for the point object
 		~Point();
 		
+        ///Returns Direction of line joining the two points
+        DirectionCosines directionLine(Point p);
+
 		///Returns distance from given Point
         double distanceFromPoint(Point p);
 

@@ -13,6 +13,7 @@
 #include "Point.hpp"
 #include "Projection.hpp"
 
+
 	/// Class might be initialized with direction cosines or ratios, to make it inclusive of both.
     DirectionCosines::DirectionCosines(double a, double b, double c){
         this -> xl = a;
