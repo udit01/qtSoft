@@ -1,11 +1,16 @@
+#include <QFileDialog.h>
+#include <QMessageBox>
+#include <iostream>
+#include <QDebug>
+
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <iostream>
+
 #include "generator3d.h"
 #include "generator2d.h"
 #include "Model3d.hpp"
-#include <QFileDialog.h>
-#include <QMessageBox>
+#include "Point.hpp"
+
 
 using namespace std;
 
@@ -82,3 +87,11 @@ void MainWindow::on_openImp_clicked()
     }
 }
 
+
+void MainWindow::on_checkFunctions_clicked()
+{
+    Point p1 = Point(3.0,4.0,8.0);
+    Point p2 = Point(5.0,8.0,3.0);
+
+    //qDebug() << p1.Point::distanceFromPoint(p2);
+}

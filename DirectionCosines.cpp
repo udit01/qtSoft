@@ -33,4 +33,14 @@
 
 	}
 
+    double DirectionCosines::scalarTripleProduct(DirectionCosines l1, DirectionCosines l2)
+    {
+
+    }
+
+    double DirectionCosines::vectorTripleProduct(DirectionCosines l1, DirectionCosines l2)
+    {
+
+    }
+
 

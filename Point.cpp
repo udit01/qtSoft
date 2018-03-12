@@ -21,12 +21,14 @@
         Point::Point(double x, double y) {
             this -> x = x;
             this -> y = y;
+            this -> z = z;
 		}
 
 		///Constructor for labelled 2D point
         Point::Point(double x, double y, std::string label) {
             this -> x = x;
             this -> x = x;
+            this -> z = 0;
             this -> label = label;
 		}
 
@@ -52,7 +54,7 @@
 		
 		///Returns distance from given Point
         double Point::distanceFromPoint(Point p){
-
+            return sqrt(pow((this -> x) - p.x, 2.0) + pow((this -> y) - p.y, 2.0) +pow((this -> z) - p.z, 2.0));
 		}
 
 		///Returns distance from given Line

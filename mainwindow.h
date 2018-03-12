@@ -24,6 +24,8 @@ private slots:
 
     void on_openImp_clicked();
 
+    void on_checkFunctions_clicked();
+
 private:
     Ui::MainWindow *ui;
     Generator2D *generator2D;

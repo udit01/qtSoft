@@ -24,6 +24,8 @@ public:
 
     double dotProduct(DirectionCosines l);
     DirectionCosines crossProduct(DirectionCosines l);
+    double scalarTripleProduct(DirectionCosines l1, DirectionCosines l2);
+    double vectorTripleProduct(DirectionCosines l1, DirectionCosines l2);
 
 };
 
