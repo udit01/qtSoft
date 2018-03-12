@@ -9,7 +9,9 @@
 #include "generator3d.h"
 #include "generator2d.h"
 #include "Model3d.hpp"
+
 #include "Point.hpp"
+#include "DirectionCosines.hpp"
 
 
 using namespace std;
@@ -92,6 +94,8 @@ void MainWindow::on_checkFunctions_clicked()
 {
     Point p1 = Point(3.0,4.0,8.0);
     Point p2 = Point(5.0,8.0,3.0);
+    DirectionCosines l1 = DirectionCosines(1.0, 2.0, 3.0);
+    DirectionCosines l2 = DirectionCosines(1.0, -3.0, 4.0);
+    DirectionCosines l3 = DirectionCosines(2.0, 4.0, -2.0);
 
-    //qDebug() << p1.Point::distanceFromPoint(p2);
 }
