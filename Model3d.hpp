@@ -42,7 +42,7 @@ public:
 	void rotate(DirectionCosines dc);
 
 	///Scale the 3d model by given factor
-	void scale(float factor);
+    void scale(double factor);
 
 	///Generate a projection of the 3D model on the given plane
 	Projection generateProjection(Plane P);

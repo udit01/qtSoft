@@ -2,8 +2,6 @@
 * Implementation of Projection Abstract Data Type
 *
 *************************/
-#include <stdbool.h>
-#include <float.h>
 #include <string>
 #include "DirectionCosines.hpp"
 #include "Graph.hpp"
@@ -24,7 +22,7 @@
 
 	}
 	/// scales the view by the specified factor
-	void Projection::scale(float factor)
+    void Projection::scale(double factor)
 	{
 
 	}

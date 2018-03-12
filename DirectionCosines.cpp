@@ -3,8 +3,6 @@
 * Will be used in Line and Point class to perform different operations.
 *
 *************************/
-#include <stdbool.h>
-#include <float.h>
 #include <string>
 #include "DirectionCosines.hpp"
 #include "Graph.hpp"
@@ -16,7 +14,7 @@
 #include "Projection.hpp"
 
 	/// Class might be initialized with direction cosines or ratios, to make it inclusive of both.
-    DirectionCosines::DirectionCosines(float a, float b, float c){
+    DirectionCosines::DirectionCosines(double a, double b, double c){
 		
 	}
 
@@ -25,7 +23,7 @@
 	}
 
 
-    float DirectionCosines::dotProduct(DirectionCosines l)
+    double DirectionCosines::dotProduct(DirectionCosines l)
 	{
 
 	}

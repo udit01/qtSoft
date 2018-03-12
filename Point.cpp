@@ -4,8 +4,6 @@
 * Contains Vector operations 
 *************************/
 
-#include <stdbool.h>
-#include <float.h>
 #include <string>
 #include "DirectionCosines.hpp"
 #include "Graph.hpp"
@@ -15,31 +13,32 @@
 #include "Plane.hpp"
 #include "Point.hpp"
 #include "Projection.hpp"
+#include <math.h>
 
 		//Different Constructors for 2D
 
 		///Constructor for unlabelled 2D point
-		Point::Point(float x, float y) {
+        Point::Point(double x, double y) {
             this -> x = x;
             this -> y = y;
 		}
 
 		///Constructor for labelled 2D point
-        Point::Point(float x, float y, std::string label) {
+        Point::Point(double x, double y, std::string label) {
             this -> x = x;
             this -> x = x;
             this -> label = label;
 		}
 
 		///Constructor for unlabelled 3D point
-		Point::Point(float x, float y, float z) {
+        Point::Point(double x, double y, double z) {
             this -> x = x;
             this -> y = y;
             this -> z = z;
 		}
 
 		///Constructor for labelled 3D point
-        Point::Point(float x, float y, float z, std::string label) {
+        Point::Point(double x, double y, double z, std::string label) {
             this -> x = x;
             this -> y = y;
             this -> z = z;
@@ -52,17 +51,17 @@
 		}
 		
 		///Returns distance from given Point
-		float Point::distanceFromPoint(Point p){
+        double Point::distanceFromPoint(Point p){
 
 		}
 
 		///Returns distance from given Line
-		float Point::distanceFromLine(Line L){
+        double Point::distanceFromLine(Line L){
 
 		}
 
 		///Returns distance from given Plane
-		float Point::distanceFromPlane(Plane P){
+        double Point::distanceFromPlane(Plane P){
 
 		}
 
@@ -107,7 +106,7 @@
 		}
 
 		///Returns the dot product with given point, treating them as vectors.  [this . p]
-		float Point::dotProduct(Point p) {
+        double Point::dotProduct(Point p) {
 
 		}
 
@@ -117,7 +116,7 @@
 		}
 
 		///Returns the translated point. Changes the coordinates of current point.
-		Point Point::translate(float x, float y, float z) {
+        Point Point::translate(double x, double y, double z) {
 
 		}
 

@@ -2,8 +2,6 @@
 *  Implementation of 2D/3D Line Abstract Data Type
 *
 *************************/
-#include <stdbool.h>
-#include <float.h>
 #include <string>
 #include "DirectionCosines.hpp"
 #include "Graph.hpp"
@@ -40,12 +38,12 @@
 	}
 
 	/// Returns angle made with given Line 
-	float Line::angleWithLine(Line L){
+    double Line::angleWithLine(Line L){
 
 	}
 
 	/// Returns angle made with given Plane
-	float Line::angleWithPlane(Plane P){
+    double Line::angleWithPlane(Plane P){
 
 	}
 

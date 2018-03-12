@@ -38,10 +38,10 @@ public:
 	bool isPerpendicular(Line L);
 
 	/// Returns angle made with given Line 
-	float angleWithLine(Line L);
+    double angleWithLine(Line L);
 
 	/// Returns angle made with given Plane
-	float angleWithPlane(Plane P);
+    double angleWithPlane(Plane P);
 
 	/// Returns projection of line on the given Plane
 	Line projectionOnPlane(Plane P);

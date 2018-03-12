@@ -12,7 +12,6 @@ class DirectionCosines;
 class Line;
 #include <string>
 class Graph;
-#include <float.h>
 
 /// The Projection Class which simply defines the detailed graph required for our software
 class Projection
@@ -35,7 +34,7 @@ public:
     static Projection deserialize(std::string s);
 
 	/// scales the view by the specified factor
-	void scale(float factor);
+    void scale(double factor);
 
 	/// rotates the view anticlockwise by the specifies angles
 	void rotate(DirectionCosines dc);

@@ -24,7 +24,7 @@ public:
     Point *p;
 
 	///Constructor for plane in form of ax + by + cz + d = 0
-	Plane(float a, float b, float c, float d);
+    Plane(double a, double b, double c, double d);
 
 	///Constructor for plane in from of it's normal line l and the point p
 	Plane(Line l, Point p);

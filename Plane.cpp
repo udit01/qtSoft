@@ -2,8 +2,6 @@
 * Implementation of Plane Abstract Data Type
 *
 *************************/
-#include <stdbool.h>
-#include <float.h>
 #include <string>
 #include "DirectionCosines.hpp"
 #include "Graph.hpp"
@@ -15,7 +13,7 @@
 #include "Projection.hpp"
 
 	///Constructor for plane in form of ax + by + cz + d = 0
-	Plane::Plane(float a, float b, float c, float d) {
+    Plane::Plane(double a, double b, double c, double d) {
 
 	}
 

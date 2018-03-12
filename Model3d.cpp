@@ -2,8 +2,6 @@
 * Implementation of 3DModel class
 *
 *************************/
-#include <stdbool.h>
-#include <float.h>
 #include <string>
 #include "DirectionCosines.hpp"
 #include "Graph.hpp"
@@ -39,7 +37,7 @@
 	}
 
 	///Scale the 3d model by given factor
-	void Model3d::scale(float factor){
+    void Model3d::scale(double factor){
 
 	}
 
@@ -65,7 +63,6 @@
 
 	///Getting the deserialized version of string to retrive object contents
     Model3d Model3d::deserialize(std::string s) {
-        Model3d *blank = new Model3d();
-        return *blank;
+
 	}
 

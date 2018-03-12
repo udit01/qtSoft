@@ -2,8 +2,6 @@
 * Implementation of Orthographic Views Abstract Data Type
 *
 *************************/
-#include <stdbool.h>
-#include <float.h>
 #include <string>
 #include "DirectionCosines.hpp"
 #include "Graph.hpp"

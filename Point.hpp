@@ -6,8 +6,6 @@
 #ifndef INC_POINT_H
 #define INC_POINT_H
 
-#include <stdbool.h>
-#include <float.h>
 #include <string>
 class Plane;
 class Line;
@@ -18,39 +16,39 @@ class Point
 	public:
 		
 		///X-Coordinate of the point
-		float x;
+        double x;
 		///Y-Coordinate of the point
-		float y;
+        double y;
 		///Z-Coordinate of the point
-		float z;
+        double z;
 		/// label of the Point - set to Null in case of Unlabelled Point
         std::string label;
 
 		//Different Constructors for 2D
 
 		///Constructor for unlabelled 2D point
-		Point(float x, float y);
+        Point(double x, double y);
 
 		///Constructor for labelled 2D point
-        Point(float x, float y, std::string label);
+        Point(double x, double y, std::string label);
 
 		///Constructor for unlabelled 3D point
-		Point(float x, float y, float z);
+        Point(double x, double y, double z);
 
 		///Constructor for labelled 3D point
-        Point(float x, float y, float z, std::string label);
+        Point(double x, double y, double z, std::string label);
 
 		///Destructor for the point object
 		~Point();
 		
 		///Returns distance from given Point
-		float distanceFromPoint(Point p);
+        double distanceFromPoint(Point p);
 
 		///Returns distance from given Line
-		float distanceFromLine(Line L);
+        double distanceFromLine(Line L);
 
 		///Returns distance from given Plane
-		float distanceFromPlane(Plane P);
+        double distanceFromPlane(Plane P);
 
 		///Returns True if Point lies on given Line
 		bool liesOnLine(Line L);
@@ -77,13 +75,13 @@ class Point
 		Point sub(Point p);
 
 		///Returns the dot product with given point, treating them as vectors.  [this . p]
-		float dotProduct(Point p);
+        double dotProduct(Point p);
 
 		///Returns the point obtained from cross product, treating them as vectors. [this x p]
 		Point crossProduct(Point p);
 
 		///Returns the translated point. Changes the coordinates of current point.
-		Point translate(float x, float y, float z);
+        Point translate(double x, double y, double z);
 
 		///Returns the translated point. Changes the coordinates of current point.
 		Point rotate(DirectionCosines dc);

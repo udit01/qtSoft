@@ -25,7 +25,7 @@ public:
 	/// True if the views are labelled 
 	bool areLabelled;
 	/// number of projections specified in the view set
-	int NumProjections;
+    double NumProjections;
 
 	///Constructor for the OV class
 	OrthographicViews();
