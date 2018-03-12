@@ -32,7 +32,10 @@
 
 	/// Returns True when line is parallel to given line
 	bool Line::isParallel(Line L){
-
+        double a = (this -> l -> xl)/(L.l -> xl);
+        double b = (this -> l -> yl)/(L.l -> yl);
+        double c = (this -> l -> zl)/(L.l -> zl);
+        return (a == b) && (b == c);
 	}
 
 	/// Returns True when line is perpendicular to given line

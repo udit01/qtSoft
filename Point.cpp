@@ -62,7 +62,8 @@
             return dL;
         }
 
-        ///Returns the distance from the origin
+        ///Returns the distance from the originmehar
+        ///
         double Point::distanceFromOrigin(){
             return sqrt(pow(this -> x, 2) + pow(this -> y, 2) + pow(this -> z, 2));
         }
