@@ -12,6 +12,7 @@
 #include "Plane.hpp"
 #include "Point.hpp"
 #include "Projection.hpp"
+#include <math.h>
 
 
 	/// Class might be initialized with direction cosines or ratios, to make it inclusive of both.
@@ -25,6 +26,10 @@
 
 	}
 
+    double DirectionCosines::magnitude()
+    {
+        return sqrt(pow(this -> xl, 2) + pow(this -> yl, 2) + pow(this -> zl, 2));
+    }
 
     double DirectionCosines::dotProduct(DirectionCosines l)
 	{

@@ -19,8 +19,8 @@
 	}
 
 	///Constructor for plane in from of it's normal line l and the point p
-    Plane::Plane(Line L, Point p1) {
-        this -> l = new DirectionCosines(L.l -> xl, L.l -> yl, L.l -> zl);
+    Plane::Plane(DirectionCosines l, Point p1) {
+        this -> l = new DirectionCosines(l.xl, l.yl, l.zl);
         this -> p = new Point(p1.x, p1.y, p1.z);
 	}
 

@@ -11,6 +11,8 @@
 #include "Model3d.hpp"
 
 #include "Point.hpp"
+#include "Line.hpp"
+#include "Plane.hpp"
 #include "DirectionCosines.hpp"
 
 
@@ -94,8 +96,13 @@ void MainWindow::on_checkFunctions_clicked()
 {
     Point p1 = Point(3.0,4.0,8.0);
     Point p2 = Point(5.0,8.0,3.0);
+    Point p3 = Point(-3.0, 0, -1.0);
     DirectionCosines l1 = DirectionCosines(1.0, 2.0, 3.0);
     DirectionCosines l2 = DirectionCosines(1.0, -3.0, 4.0);
     DirectionCosines l3 = DirectionCosines(2.0, 4.0, -2.0);
+    Line L = Line(l1, p2);
+    Plane P = Plane(l2, p2);
+
+
 
 }

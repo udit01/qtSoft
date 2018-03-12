@@ -27,7 +27,7 @@ public:
     Plane(double a, double b, double c, double d);
 
 	///Constructor for plane in from of it's normal line l and the point p
-	Plane(Line l, Point p);
+    Plane(DirectionCosines l, Point p);
 
 	///Constructor for plane in form of 3 points p1, p2, p3 lying on it.
 	Plane(Point p1, Point p2, Point p3);

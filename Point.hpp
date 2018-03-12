@@ -45,6 +45,9 @@ class Point
         ///Returns Direction of line joining the two points
         DirectionCosines directionLine(Point p);
 
+        ///Returns the distance from the origin
+        double distanceFromOrigin();
+
 		///Returns distance from given Point
         double distanceFromPoint(Point p);
 
@@ -84,11 +87,11 @@ class Point
 		///Returns the point obtained from cross product, treating them as vectors. [this x p]
 		Point crossProduct(Point p);
 
-		///Returns the translated point. Changes the coordinates of current point.
-        Point translate(double x, double y, double z);
+        ///Translates point. Changes the coordinates of current point.
+        void translate(double x, double y, double z);
 
 		///Returns the translated point. Changes the coordinates of current point.
-		Point rotate(DirectionCosines dc);
+        Point rotate(DirectionCosines angles);
 
 };
 

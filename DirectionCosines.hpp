@@ -22,6 +22,7 @@ public:
 	/// cosine of the angle made by the line/segment with the z-axis
     double zl;
 
+    double magnitude();
     double dotProduct(DirectionCosines l);
     DirectionCosines crossProduct(DirectionCosines l);
     static double scalarTripleProduct(DirectionCosines l1, DirectionCosines l2, DirectionCosines l3);
